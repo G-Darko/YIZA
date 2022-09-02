@@ -1,0 +1,229 @@
+ion-icon {
+  pointer-events: none;
+}
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+:root{
+	--blanco: #fff;
+	--azul: #338AFF;
+	--mainC: #242424;
+	--negro: #aaa;
+	--gris: #fffb;
+	--rgba: rgba(255, 255, 255, .18);
+	--azulH: #779CEA;
+}
+body{
+	background: var(--mainC);
+	overflow: hidden;
+	width: 100%;
+}
+*::-webkit-scrollbar{
+	width: 5px;
+	background: var(--mainC);
+}
+*::-webkit-scrollbar-thumb{
+	background: linear-gradient(-45deg, var(--azul) 0%, 
+		#245CEA 50%, 
+		var(--gris) 50%, 
+		var(--rgba) 100%);
+	border-radius: 10px;
+}
+.topBar{
+	width: 105%;
+	height: 60px;
+	display: flex;
+	align-items: center;
+	padding: 0 10px;
+	transition: .5s;
+	top: 0;
+	background: var(--azul);
+	z-index: 100;
+	/*transform: translateX(30px);*/
+}
+.topBar .bordeT{
+	position: absolute;
+	transform: translatey(32px) translateX(-10px);
+	background: var(--azul);
+	width: 105%;
+	border-bottom: 5px solid var(--gris);
+}
+.icon{
+	position: relative;
+	display: block;
+	min-width: 60px;
+	height: 60px;
+	line-height: 70px;
+	text-align: center;
+	z-index: 100000;
+	transform: translateX(15px);
+}
+.icon ion-icon{
+	font-size: 2em;
+	transform: translateY(5px);
+	width: 100%;
+}
+.title{
+	position: relative;
+	display: block;
+	padding: 0 10px;
+	height: 60px;
+	font-size: 30px;
+	line-height: 60px;
+	text-align: start;
+	white-space: nowrap;
+	font-weight: 650;
+	transform: translateX(15px);	
+}
+.contenedor{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 400px;
+	padding: 40px;
+	background: #232323;
+	box-shadow: 0 7px 25px var(--rgba);
+	border-radius: 20px;
+}
+.contenedor h2{
+	margin: 0 0 30px;
+	padding: 0;
+	color: var(--blanco);
+	text-align: center;
+	font-weight: 700;
+	font-size: 1.7em;
+}
+.contenedor .inputBx{
+	position: relative;
+
+}
+.contenedor .inputBx input{
+	width: 100%;
+	padding: 10px 0;
+	padding-left: 10px; 
+	padding-right: 40px;
+	font-size: 1.3em;
+ 	color: var(--blanco);
+ 	margin-bottom: 30px;
+ 	border: none;
+ 	outline: none;
+ 	background: transparent;
+ 	border-bottom: 1px solid var(--gris);
+ 	letter-spacing: 1px;
+ 	border-radius: 10px;
+}
+.contenedor .inputBx input:focus,
+.contenedor .inputBx input:valid{
+	border-bottom: 1px solid var(--azul);
+}
+.contenedor .inputBx label{
+	position: absolute;
+	top: 0;
+	left: 10px;
+	padding: 10px 0;
+ 	font-size: 1.3em;
+	color: var(--blanco);
+	pointer-events: none;
+	transition: .5s;
+ 	letter-spacing: 1px;
+}
+.contenedor .inputBx label .iconic{
+	position: relative;
+	min-width: 60px;
+	height: 60px;
+	text-align: center;
+	z-index: 100000;
+}
+.contenedor .inputBx label ion-icon{
+	font-size: 1.2em;
+	transform: translateY(3px);
+}
+.contenedor .inputBx .pass ion-icon{
+	font-size: 1.4em;
+	transform: translateY(-2px);
+}
+.contenedor .inputBx .pass{
+	position: absolute;
+	top: 0;
+	left: calc(100% - 10px);
+	padding: 10px 0;
+ 	font-size: 1.3em;
+	color: var(--azul);
+	transition: .5s;
+ 	letter-spacing: 1px;
+ 	text-align: right;
+ 	cursor: pointer;
+ 	transform: translateX(-100%);
+ 	z-index: 10000000000000;
+}
+.contenedor .inputBx .pass .btnPass{
+	cursor: pointer;
+}
+.contenedor .inputBx .pass .btnPass:hover{
+	color: var(--azulH);
+}
+.contenedor .inputBx input:focus ~ label,
+.contenedor .inputBx input:valid ~ label{
+	top: -35px;
+	left: 10px;
+	color: var(--azul);
+	font-size: 1em;
+}
+.contenedor .form button{
+	display: flex;
+	position: relative;
+	background: var(--azul);
+	width: 100%;
+	padding: 10px 20px;
+	cursor: pointer;
+	font-size: 1.3em;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	border: none;
+	border-radius: 10px;
+}
+.contenedor .form button:hover{
+	background: var(--azulH);
+}
+.error{
+	margin-top: 15px;
+	display: block;
+	position: relative;
+	padding: 10px 20px;
+	text-align: left;
+	align-items: center;
+	justify-content: center;
+	background-color: #f5c1bb;
+  border-color: #f00c;
+  color: #c72f1d;
+  border-radius: 10px;
+  font-size: 1.3em;
+  text-transform: uppercase;
+}
+.error ion-icon{
+	font-size: 1.2em;
+	transform: translateY(4px);
+}
+footer{
+	display: flex;
+	position: absolute;
+	box-shadow: 0 7px 25px var(--rgba);
+	color: var(--azul);
+	height: 50px;
+	width: 100%;
+	background: var(--mainC);
+	transition: .5s;
+	z-index: 0;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	border-radius: 10px;
+	bottom: 0;
+	font-weight: 700;
+	font-size: 1.4em;
+}

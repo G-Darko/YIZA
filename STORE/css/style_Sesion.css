@@ -1,0 +1,262 @@
+ion-icon {
+  pointer-events: none;
+}
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: sans-serif;   
+}
+:root{
+   --blanco: #fff;
+   --mainC: #E4E9F0;
+   --azul: #0060B0;
+   --gris: #333;
+   --negro1: #222;
+   --negro2: #999;
+   --rgba: rgba(0, 0, 0, .25);
+   --azulH: #779CEA;
+   --bloque:  #fff;
+}
+:root body.dark{
+   --azul: #279CEA;
+   --mainC: #282828;
+   --negro1: #fff;
+   --negro2: #aaa;
+   --gris: #fffb;
+   --rgba: rgba(255, 255, 255, .18);
+   --bloque: #111;
+}
+body{
+   min-height: 100vh;
+   overflow-x: hidden;
+   background: var(--mainC);
+}
+*::-webkit-scrollbar{
+   width: 5px;
+}
+*::-webkit-scrollbar-thumb{
+   background: linear-gradient(-50deg, 
+      var(--azul) 0%, 
+      #245CEA 50%, 
+      var(--gris) 50%, 
+      var(--rgba) 100%);
+   border-radius: 10px;
+}
+
+main{
+    width: 100%;
+    padding: 20px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.contenedor__todo{
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+    transform: translateY(30px);
+}
+
+.caja__trasera{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    background: rgba(0, 128, 255, 0.5);
+
+}
+
+.caja__trasera div{
+    margin: 100px 40px;
+    color: var(--blanco);
+    transition: all 500ms;
+}
+
+
+.caja__trasera div p,
+.caja__trasera button{
+    margin-top: 30px;
+}
+
+.caja__trasera div h3{
+    font-weight: 400;
+    font-size: 26px;
+}
+
+.caja__trasera div p{
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.caja__trasera button{
+    padding: 10px 40px;
+    border: 1px solid var(--azul);
+    font-size: 14px;
+    background: transparent;
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--blanco);
+    outline: none;
+    transition: all 300ms;
+    border-radius: 10px;
+}
+
+.caja__trasera button:hover{
+    background: var(--azulH);
+    color: var(--blanco);
+}
+
+/*Formularios*/
+
+.login-register{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 380px;
+    position: relative;
+    top: -185px;
+    left: 10px;
+
+    /*La transicion va despues del codigo JS*/
+    transition: left 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
+}
+
+.login-register div{
+    width: 100%;
+    padding: 60px 20px;
+    background: var(--blanco);
+    position: absolute;
+    border-radius: 20px;
+    height: 370px;
+    overflow: hidden;
+    overflow-y: auto;
+    transform: translateY(-7px);
+}
+
+.login-register div h2{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--azul);
+}
+
+.login-register div input{
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    background: #F2F2F2;
+    font-size: 16px;
+    outline: none;
+    border-radius: 10px;
+    border-bottom: 2px solid var(--negro2);
+}
+.login-register div input:focus,
+.login-register div input:valid{
+    border-bottom: 2px solid var(--azul);
+}
+.login-register div button{
+    padding: 10px 40px;
+    margin-top: 40px;
+    border: none;
+    font-size: 14px;
+    background: var(--azul);
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--blanco);
+    outline: none;
+    border-radius: 10px;
+}
+.login-register div button:hover{
+    background: var(--azulH);
+}
+.login-register div input:nth-child(7){
+    margin-bottom: 10px;
+}
+.login-register div label{
+    margin-left: 5px;
+}
+.login-register div img{
+    margin: 5px 0;
+    width: 80px;
+    object-fit: cover;
+    background: var(--azulH);
+    transform: translateY(15px);
+}
+
+.formulario__login{
+    opacity: 1;
+    display: block;
+}
+.formulario__register{
+    display: none;
+}
+
+#IniPass,
+#pass{
+    padding-right: 45px;
+}
+.pass ion-icon,
+.RegPass ion-icon{
+    font-size: 1.4em;
+    transform: translateY(-2px);
+}
+.pass, 
+.RegPass{
+    position: absolute;
+    top: 190px;
+    left: calc(100% - 25px);
+    padding: 10px 0;
+    font-size: 1.3em;
+    color: var(--azul);
+    transition: .5s;
+    letter-spacing: 1px;
+    text-align: right;
+    cursor: pointer;
+    transform: translateX(-100%);
+    z-index: 10000000000000;
+}
+.RegPass{
+    top: 430px;
+}
+.pass .btnIniPass,
+.RegPass .btnPass{
+    cursor: pointer;
+}
+.pass .btnIniPass:hover,
+.RegPass .btnPass: hover{
+    color: var(--azulH);
+}
+
+
+@media screen and (max-width: 850px){
+
+    main{
+        margin-top: 50px;
+    }
+    .caja__trasera{
+        max-width: 350px;
+        height: 300px;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .caja__trasera div{
+        margin: 0px;
+        position: absolute;
+    }
+    /*Formularios*/
+
+    .login-register{
+        top: -10px;
+        left: -5px;
+        margin: auto;
+    }
+
+    .login-register div{
+        position: relative;
+    }
+}
