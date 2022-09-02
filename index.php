@@ -1,3 +1,4 @@
 <script>
-	window.location.href="STORE"
+	//window.location.href="STORE"
+	alert('Hola');
 </script>
