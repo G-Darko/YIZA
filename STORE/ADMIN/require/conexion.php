@@ -1,9 +1,9 @@
 <?php  
 	//crear variables conexion
-	$servername="localhost";
-	$bd="yiza";
-	$username="root";
-	$password="";
+	$servername="sql5.freesqldatabase.com";
+	$bd="sql5516956";
+	$username="sql5516956";
+	$password="jBXmc7yHJ8";
 
 	$response = new stdClass();
 	error_reporting(0); //ocultar o mostrar los errores 
