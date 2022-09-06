@@ -290,5 +290,5 @@ INSERT INTO productos VALUES
 
 INSERT INTO config VALUES 
 	(null, 'YIZA', 'YIZA STORE', 'Utiliza Yiza, Garantiza tu Satisfacción, Minimiza tus Gastos', 'Productos Electrónicos y Digitales',
-	'Gael Darko', 'CECyTEM Tultitlán', 'gael200430@gmail.com', '4242424242', 20, 10, 'SI', 
+	'Gael Darko', 'CECyTEM Tultitlán', 'yiza@gmail.com', '4242424242', 20, 10, 'SI', 
 	'Stock no disponible', 'img/logo.jpg');
