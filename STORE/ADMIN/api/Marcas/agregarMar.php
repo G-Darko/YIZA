@@ -43,6 +43,8 @@
 							$sql = "INSERT INTO marcas VALUES (null, '$nombre', '$subir')";
 							$resultado = mysqli_query($conexion, $sql);
 								if ($resultado) {
+									$response->nom=$nombre;
+									$response->img=$subir;
 									$response->state=true;
 								}else{
 									$response->state=false;
@@ -56,6 +58,8 @@
 							$sql = "INSERT INTO marcas VALUES (null, '$nombre', '$subir')";
 							$resultado = mysqli_query($conexion, $sql);
 								if ($resultado) {
+									$response->nom=$nombre;
+									$response->img=$subir;
 									$response->state=true;
 								}else{
 									$response->state=false;
@@ -79,6 +83,8 @@
 				$sql = "INSERT INTO marcas VALUES (null, '$nombre', 'img/logo3.png')";
 				$resultado = mysqli_query($conexion, $sql);
 					if ($resultado) {
+						$response->nom=$nombre;
+						$response->img='img/logo3.png';
 						$response->state=true;
 					}else{
 						$response->state=false;

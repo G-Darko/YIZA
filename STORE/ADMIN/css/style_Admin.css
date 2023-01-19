@@ -1152,6 +1152,9 @@ h2 ion-icon{
 	height: 35px;
 	text-decoration: none;
 }
+.paginador a{
+	cursor: pointer;
+}
 .paginador a:hover{
 	background: var(--azulH);
 }
